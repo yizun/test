@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+<!--<view class="section tc">
+ <video src="{{src}}"  controls ></video>
+ <view class="btn-area">
+  <button bindtap="bindButtonTap">获取视频</button>
+ </view>
+</view>-->
+ 
+<!-- 
+ danmu-list:弹幕列表
+ enable-danmu:是否显示弹幕
+ danmu-btn:弹幕按钮
+ controls:是否显示视频控件，并没有什么用
+ -->
+<view class="section tc">
+ <video id="myVideo" src="https://api.penyamovie.com/upfile/bf9fc386-c774-40dd-bf47-c15cf6fcb282.mp4" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+ <view class="btn-area">
+  <button bindtap="bindButtonTap">获取视频</button>
+  <input bindblur="bindInputBlur"/>
+  <button bindtap="bindSendDanmu">发送弹幕</button>
+ </view>
+</view>
+ 
+<!-- 现在的video就下面三个属性 -->
+<video src="" binderror="" hidden></video>
